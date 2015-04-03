@@ -1,0 +1,19 @@
+{
+  "name": "source",
+  "homepage": "https://kalenjohnson.com/source-theme/",
+  "authors": [
+    "Kalen Johnson <info@kalenjohnson.com>"
+  ],
+  "license": "GPLv2",
+  "private": true,
+  "dependencies": {
+    "modernizr": "2.8.2",
+    "bourbon": "~4.2.2",
+    "neat": "~1.7.2"
+  },
+  "overrides": {
+    "modernizr": {
+      "main": "./modernizr.js"
+    }
+  }
+}
