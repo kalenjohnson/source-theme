@@ -16,7 +16,10 @@
   &:before {
     @extend .fa;
     @extend .fa-fw;
-    font-size: 30px;
+    font-size: 24px;
+    @media (min-width: $large-screen) {
+      font-size: 30px;
+    }
   }
 }
 

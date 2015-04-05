@@ -9,16 +9,13 @@
  * The routing is enclosed within an anonymous function so that you can
  * always reference jQuery with $, even when in .noConflict() mode.
  *
- * Google CDN, Latest jQuery
- * To use the default WordPress version of jQuery, go to lib/config.php and
- * remove or comment out: add_theme_support('jquery-cdn');
  * ======================================================================== */
 
 (function($) {
 
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
-  var source = {
+  var Source = {
     // All pages
     'common': {
       init: function() {
@@ -29,7 +26,6 @@
           openbtn = $('#open-button');
 
         function toggleMenu() {
-          console.log(bodyEl.hasClass('show-menu'));
           if (bodyEl.hasClass('show-menu')) {
             bodyEl.removeClass('show-menu');
           }
@@ -47,24 +43,6 @@
           }
         });
 
-      },
-      finalize: function() {
-        // JavaScript to be fired on all pages, after page specific JS is fired
-      }
-    },
-    // Home page
-    'home': {
-      init: function() {
-        // JavaScript to be fired on the home page
-      },
-      finalize: function() {
-        // JavaScript to be fired on the home page, after the init JS
-      }
-    },
-    // About us page, note the change from about-us to about_us.
-    'about_us': {
-      init: function() {
-        // JavaScript to be fired on the about us page
       }
     }
   };
@@ -74,7 +52,7 @@
   var UTIL = {
     fire: function(func, funcname, args) {
       var fire;
-      var namespace = source;
+      var namespace = Source;
       funcname = (funcname === undefined) ? 'init' : funcname;
       fire = func !== '';
       fire = fire && namespace[func];

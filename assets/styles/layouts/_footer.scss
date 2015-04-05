@@ -1,0 +1,10 @@
+.content-info {
+  @include outer-container();
+  padding: 1em;
+  background: lighten($base-background-color, 10%);
+
+  .widget:last-of-type,
+  p {
+    margin-bottom: 0;
+  }
+}

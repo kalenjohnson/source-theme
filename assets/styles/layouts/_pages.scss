@@ -2,8 +2,14 @@
   margin: 1em 0 5em;
 }
 
+.page-header,
+body.single .entry-title {
+  border-bottom: 1px solid lighten($base-background-color, 20%);
+}
+
 .page-header h1,
 body.single .entry-title {
   text-align: center;
-  font-size: 3em;
+  padding-bottom: 0.5em;
+
 }

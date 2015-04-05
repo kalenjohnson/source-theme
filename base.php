@@ -21,8 +21,8 @@ get_template_part('templates/head');
             </main><!-- /.main -->
           </div><!-- /.container -->
         </div><!-- /.content -->
+        <?php get_footer(); ?>
       </div><!-- /.content-wrap -->
     </div><!-- /.wrap -->
-    <?php get_footer(); ?>
   </body>
 </html>
