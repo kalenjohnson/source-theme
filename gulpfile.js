@@ -40,6 +40,10 @@ var project = manifest.getProjectGlobs();
 
 // CLI options
 var enabled = {
+  // Enable static asset revisioning when `--production`
+  rev: argv.production,
+  // Disable source maps when `--production`
+  maps: !argv.production,
   // Fail styles task on error when `--production`
   failStyleTask: argv.production
 };
@@ -62,32 +66,33 @@ var cssTasks = function(filename) {
     .pipe(function() {
       return $.if(!enabled.failStyleTask, $.plumber());
     })
-    .pipe($.sourcemaps.init)
-      .pipe(function() {
-        return $.if('*.less', $.less());
-      })
-      .pipe(function() {
-        return $.if('*.scss', $.sass({
-          outputStyle: 'nested', // libsass doesn't support expanded yet
-          precision: 10,
-          includePaths: ['.'],
-          errLogToConsole: !enabled.failStyleTask
-        }));
-      })
-      .pipe($.concat, filename)
-      .pipe($.autoprefixer, {
-        browsers: [
-          'last 2 versions', 'ie 8', 'ie 9', 'android 2.3', 'android 4',
-          'opera 12'
-        ]
-      })
-      .pipe(function() {
-        return gulp.dest(path.dist + 'styles');
-      })
-      .pipe($.minifyCss)
-    .pipe($.rev)
     .pipe(function() {
-      return $.sourcemaps.write('.');
+      return $.if(enabled.maps, $.sourcemaps.init());
+    })
+    .pipe(function() {
+      return $.if('*.less', $.less());
+    })
+    .pipe(function() {
+      return $.if('*.scss', $.sass({
+        outputStyle: 'nested', // libsass doesn't support expanded yet
+        precision: 10,
+        includePaths: ['.'],
+        errLogToConsole: !enabled.failStyleTask
+      }));
+    })
+    .pipe($.concat, filename)
+    .pipe($.autoprefixer, {
+      browsers: [
+        'last 2 versions', 'ie 8', 'ie 9', 'android 2.3', 'android 4',
+        'opera 12'
+      ]
+    })
+    .pipe($.minifyCss)
+    .pipe(function() {
+      return $.if(enabled.rev, $.rev());
+    })
+    .pipe(function() {
+      return $.if(enabled.maps, $.sourcemaps.write('.'));
     })();
 };
 
@@ -100,12 +105,16 @@ var cssTasks = function(filename) {
 // ```
 var jsTasks = function(filename) {
   return lazypipe()
-    .pipe($.sourcemaps.init)
+    .pipe(function() {
+      return $.if(enabled.maps, $.sourcemaps.init());
+    })
     .pipe($.concat, filename)
     .pipe($.uglify)
-    .pipe($.rev)
     .pipe(function() {
-      return $.sourcemaps.write('.');
+      return $.if(enabled.rev, $.rev());
+    })
+    .pipe(function() {
+      return $.if(enabled.maps, $.sourcemaps.write('.'));
     })();
 };
 
@@ -229,9 +238,9 @@ gulp.task('watch', function() {
 // Generally you should be running `gulp` instead of `gulp build`.
 gulp.task('build', function(callback) {
   runSequence('styles',
-              'scripts',
-              ['fonts', 'images'],
-              callback);
+    'scripts',
+    ['fonts', 'images'],
+    callback);
 });
 
 // ### Wiredep

@@ -5,6 +5,7 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
+  background: $background;
 }
 
 h1,
@@ -26,12 +27,12 @@ p {
 a {
   color: $action-color;
   text-decoration: none;
-  transition: color 0.1s linear;
+  transition: opacity 0.2s;
 
   &:active,
   &:focus,
   &:hover {
-    color: darken($action-color, 15%);
+    opacity: 0.6;
   }
 
   &:active,
@@ -52,4 +53,8 @@ img,
 picture {
   margin: 0;
   max-width: 100%;
+}
+
+.screen-reader-text {
+  display: none;
 }

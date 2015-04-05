@@ -1,12 +1,12 @@
 // Typography
-$base-font-family: $helvetica;
+$base-font-family: 'Source Code Pro', monospace;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
-$base-font-size: 1em;
+$base-font-size: 1.4em;
 
 // Line height
-$base-line-height: 1.5;
+$base-line-height: 1.8;
 $heading-line-height: 1.2;
 
 // Other Sizes
@@ -20,11 +20,14 @@ $blue: #477dca;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
+$background: #1b1918;
+$foreground: #a8a19f;
+$primary: #5ab738;
 
 // Font Colors
-$base-background-color: #fff;
-$base-font-color: $dark-gray;
-$action-color: $blue;
+$base-background-color: $background;
+$base-font-color: $foreground;
+$action-color: $primary;
 
 // Border
 $base-border-color: $light-gray;
@@ -33,16 +36,3 @@ $base-border: 1px solid $base-border-color;
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
-
-// Neat Overrides
-$column: 90px;
-$gutter: 30px;
-$grid-columns: 12;
-$max-width: em(1088);
-
-// Neat Breakpoints
-$medium-screen: em(640);
-$large-screen: em(860);
-
-$medium-screen-up: new-breakpoint(min-width $medium-screen 4);
-$large-screen-up: new-breakpoint(min-width $large-screen 8);

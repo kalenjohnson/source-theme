@@ -1,21 +1,27 @@
-@import "common/variables";
+// Override variables for Bourbon and Neat
+@import "base/variables";
 
 // bower:scss
 @import "../../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
 @import "../../bower_components/neat/app/assets/stylesheets/_neat.scss";
+@import "../../bower_components/fontawesome/scss/font-awesome.scss";
 // endbower
 
+@import "common/variables";
 @import "common/global";
+@import "common/typography";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
 @import "components/grid";
 @import "components/lists";
+@import "components/offcanvas-menu";
+@import "components/social-links";
 @import "components/tables";
 @import "components/wp-classes";
 @import "layouts/header";
-@import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";
 @import "layouts/posts";
+@import "layouts/widgets";
 

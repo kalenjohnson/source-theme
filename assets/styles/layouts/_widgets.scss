@@ -1,0 +1,6 @@
+.widget {
+  margin-bottom: 2em;
+  &:last-of-type {
+    margin-bottom: 8em;
+  }
+}

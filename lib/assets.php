@@ -70,50 +70,9 @@ function asset_path($filename) {
   }
 }
 
-function bower_map_to_cdn($dependency, $fallback) {
-  static $bower;
-
-  if (empty($bower)) {
-    $bower_path = get_template_directory() . '/bower.json';
-    $bower = new JsonManifest($bower_path);
-  }
-
-  $templates = [
-    'google' => '//ajax.googleapis.com/ajax/libs/%name%/%version%/%file%'
-  ];
-
-  $version = $bower->getPath('dependencies.' . $dependency['name']);
-
-  if (isset($version) && preg_match('/^(\d+\.){2}\d+$/', $version)) {
-    $search = ['%name%', '%version%', '%file%'];
-    $replace = [$dependency['name'], $version, $dependency['file']];
-    return str_replace($search, $replace, $templates[$dependency['cdn']]);
-  } else {
-    return $fallback;
-  }
-
-}
-
 function assets() {
+  wp_enqueue_style('source_google_fonts', 'http://fonts.googleapis.com/css?family=Source+Code+Pro', false, null);
   wp_enqueue_style('source_css', asset_path('styles/main.css'), false, null);
-
-  /**
-   * Grab Google CDN's latest jQuery with a protocol relative URL; fallback to local if offline
-   * jQuery & Modernizr load in the footer per HTML5 Boilerplate's recommendation: http://goo.gl/nMGR7P
-   * If a plugin enqueues jQuery-dependent scripts in the head, jQuery will load in the head to meet the plugin's dependencies
-   * To explicitly load jQuery in the head, change the last wp_enqueue_script parameter to false
-   */
-  if (!is_admin() && current_theme_supports('jquery-cdn')) {
-    wp_deregister_script('jquery');
-
-    wp_register_script('jquery', bower_map_to_cdn([
-      'name' => 'jquery',
-      'cdn' => 'google',
-      'file' => 'jquery.min.js'
-    ], asset_path('scripts/jquery.js')), [], null, true);
-
-    add_filter('script_loader_src', __NAMESPACE__ . '\\jquery_local_fallback', 10, 2);
-  }
 
   if (is_single() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
@@ -121,23 +80,6 @@ function assets() {
 
   wp_enqueue_script('modernizr', asset_path('scripts/modernizr.js'), [], null, true);
   wp_enqueue_script('jquery');
-  wp_enqueue_script('source_js', asset_path('scripts/main.js'), [], null, true);
+  wp_enqueue_script('source_js', asset_path('scripts/main.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
-
-// http://wordpress.stackexchange.com/a/12450
-function jquery_local_fallback($src, $handle = null) {
-  static $add_jquery_fallback = false;
-
-  if ($add_jquery_fallback) {
-    echo '<script>window.jQuery || document.write(\'<script src="' . $add_jquery_fallback .'"><\/script>\')</script>' . "\n";
-    $add_jquery_fallback = false;
-  }
-
-  if ($handle === 'jquery') {
-    $add_jquery_fallback = apply_filters('script_loader_src', asset_path('scripts/jquery.js'), 'jquery-fallback');
-  }
-
-  return $src;
-}
-add_action('wp_head', __NAMESPACE__ . '\\jquery_local_fallback');

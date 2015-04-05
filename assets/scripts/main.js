@@ -22,7 +22,31 @@
     // All pages
     'common': {
       init: function() {
-        // JavaScript to be fired on all pages
+
+        // https://github.com/codrops/OffCanvasMenuEffects
+        var bodyEl = $('body'),
+          content = $('.content-wrap'),
+          openbtn = $('#open-button');
+
+        function toggleMenu() {
+          console.log(bodyEl.hasClass('show-menu'));
+          if (bodyEl.hasClass('show-menu')) {
+            bodyEl.removeClass('show-menu');
+          }
+          else {
+            bodyEl.addClass('show-menu');
+          }
+        }
+
+        openbtn.click(toggleMenu);
+
+        // close the menu element if the target it´s not the menu element or one of its descendants..
+        content.click(function(ev) {
+          if(bodyEl.hasClass('show-menu') && ev.target !== openbtn ) {
+            toggleMenu();
+          }
+        });
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

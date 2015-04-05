@@ -1,0 +1,86 @@
+.social li {
+  display: inline-block;
+}
+
+@media screen and (max-width: 32em) {
+  .social li {
+    padding-right: 1em;
+  }
+}
+
+.social a {
+  font-size: 0;
+  margin: 0 1em 0 0;
+  padding: 0;
+  color: $primary;
+  &:before {
+    @extend .fa;
+    @extend .fa-fw;
+    font-size: 30px;
+  }
+}
+
+.social a[href*='wordpress.org']:before,
+.social a[href*='wordpress.com']:before {
+  content: $fa-var-wordpress;
+}
+.social a[href*='facebook.com']:before {
+  content: $fa-var-facebook;
+}
+.social a[href*='twitter.com']:before {
+  content: $fa-var-twitter;
+}
+.social a[href*='dribbble.com']:before {
+  content: $fa-var-dribbble;
+}
+.social a[href*='plus.google.com']:before {
+  content: $fa-var-google-plus;
+}
+.social a[href*='pinterest.com']:before {
+  content: $fa-var-pinterest;
+}
+.social a[href*='git']:before {
+  content: $fa-var-git;
+}
+.social a[href*='github.com']:before {
+  content: $fa-var-github;
+}
+.social a[href*='bitbucket.org']:before {
+  content: $fa-var-bitbucket-square;
+}
+.social a[href*='ycombinator.com']:before {
+  content: $fa-var-hacker-news;
+}
+.social a[href*='skype']:before {
+  content: $fa-var-skype;
+}
+.social a[href*='yelp.com']:before {
+  content: $fa-var-yelp;
+}
+.social a[href*='tumblr.com']:before {
+  content: $fa-var-tumblr;
+}
+.social a[href*='youtube.com']:before {
+  content: $fa-var-youtube;
+}
+.social a[href*='flickr.com']:before {
+  content: $fa-var-flickr;
+}
+.social a[href*='vimeo.com']:before {
+  content: $fa-var-vimeo-square;
+}
+.social a[href*='instagram.com']:before {
+  content: $fa-var-instagram;
+}
+.social a[href*='codepen.io']:before {
+  content: $fa-var-codepen;
+}
+.social a[href*='linkedin.com']:before {
+  content: $fa-var-linkedin;
+}
+.social a[href*='/feed']:before {
+  content: $fa-var-rss;
+}
+.social a[href*='mailto']:before {
+  content: $fa-var-envelope-o;
+}

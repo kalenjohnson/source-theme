@@ -9,11 +9,19 @@
   "dependencies": {
     "modernizr": "2.8.2",
     "bourbon": "~4.2.2",
-    "neat": "~1.7.2"
+    "neat": "~1.7.2",
+    "normalize.css": "~3.0.3",
+    "fontawesome": "~4.3.0"
   },
   "overrides": {
     "modernizr": {
       "main": "./modernizr.js"
+    },
+    "fontawesome": {
+      "main": [
+        "./scss/font-awesome.scss",
+        "./fonts/*"
+      ]
     }
   }
 }
