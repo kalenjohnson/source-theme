@@ -1,0 +1,13 @@
+{
+    "name": "kalenjohnson/source",
+    "description": "Source is a WordPress theme for coders",
+    "license": "GPLv2",
+    "type": "wordpress-theme",
+    "authors": [
+        {
+            "name": "kalenjohnson",
+            "email": "info@kalenjohnson.com"
+        }
+    ],
+    "require": {}
+}
