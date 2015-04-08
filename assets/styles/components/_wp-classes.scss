@@ -1,7 +1,26 @@
 // WordPress Generated Classes
 // http://codex.wordpress.org/CSS#WordPress_Generated_Classes
 
+// Captions
+.wp-caption {
+  background: lighten($base-background-color, 10%);
+  margin: 0;
+  figcaption {
+    padding: 0 1em 0.5em;
+    font-size: 0.8em;
+  }
+}
+.wp-caption-text {
+
+}
+
 // Media alignment
+.aligncenter,
+.alignleft,
+.alignright,
+.alignnone {
+  margin-top: 15px;
+}
 .alignnone {
   margin-left: 0;
   margin-right: 0;
@@ -27,16 +46,3 @@
   }
 }
 
-// Captions
-//.wp-caption {
-//  &:extend(.thumbnail all);
-//}
-//.wp-caption-text {
-//  &:extend(.thumbnail .caption all);
-//}
-
-// Text meant only for screen readers
-//.screen-reader-text {
-//  &:extend(.sr-only all);
-//  &:extend(.sr-only-focusable all);
-//}
