@@ -3,4 +3,3 @@
     <?php dynamic_sidebar('sidebar-footer'); ?>
   </footer>
 <?php endif; ?>
-<?php wp_footer(); ?>
