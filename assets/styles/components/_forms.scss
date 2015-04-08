@@ -84,28 +84,3 @@ select {
 .search-submit {
   width: 100%;
 }
-
-// Comment form
-.comment-form-email,
-.comment-form-url {
-  @media (min-width: $large-screen) {
-    width: 50%;
-    float: left;
-  }
-}
-.comment-form-email {
-  padding-right: 1em;
-}
-.comment-form-url {
-  padding-left: 1em;
-}
-
-
-.comment-form-comment,
-#comment {
-  margin-bottom: 0;
-}
-.form-allowed-tags {
-  font-size: 0.8em;
-  margin-bottom: 2em;
-}
