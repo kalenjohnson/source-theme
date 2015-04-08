@@ -1,19 +1,28 @@
+# Copyright (C) 2015 Kalen Johnson
+# This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
+"Project-Id-Version: Source 0.0.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/Source\n"
+"POT-Creation-Date: 2015-04-08 23:49:09+00:00\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 
 #: 404.php:4
 msgid "Sorry, but the page you were trying to view does not exist."
 msgstr ""
 
-#: base.php:14
+#: base.php:11
 msgid ""
 "You are using an <strong>outdated</strong> browser. Please <a href=\"http://"
 "browsehappy.com/\">upgrade your browser</a> to improve your experience."
 msgstr ""
 
-#: functions.php:27
+#: functions.php:31
 msgid "Error locating %s for inclusion"
 msgstr ""
 
@@ -21,7 +30,15 @@ msgstr ""
 msgid "Sorry, no results were found."
 msgstr ""
 
-#: lib/extras.php:31
+#: index.php:15
+msgid "Older posts"
+msgstr ""
+
+#: index.php:16
+msgid "Newer posts"
+msgstr ""
+
+#: lib/extras.php:24
 msgid "Continued"
 msgstr ""
 
@@ -29,11 +46,15 @@ msgstr ""
 msgid "Primary Navigation"
 msgstr ""
 
-#: lib/init.php:49
+#: lib/init.php:23
+msgid "Social Media Links"
+msgstr ""
+
+#: lib/init.php:46
 msgid "Primary"
 msgstr ""
 
-#: lib/init.php:58
+#: lib/init.php:55
 msgid "Footer"
 msgstr ""
 
@@ -68,36 +89,34 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: templates/content-page.php:2 templates/content-single.php:11
+#: templates/content-page.php:2 templates/content-single.php:21
 msgid "Pages:"
 msgstr ""
 
-#: templates/entry-meta.php:2
+#: templates/entry-meta.php:1
+msgid ", "
+msgstr ""
+
+#: templates/entry-meta.php:5
 msgid "By"
+msgstr ""
+
+#: templates/entry-meta.php:9
+msgid "Tags:"
 msgstr ""
 
 #: templates/searchform.php:2
 msgid "Search for:"
 msgstr ""
 
-#: templates/searchform.php:4 templates/searchform.php:6
+#: templates/searchform.php:3 templates/searchform.php:4
 msgid "Search"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "Source Theme"
-msgstr ""
-
-#. Theme URI of the plugin/theme
-msgid "https://kalenjohnson.com/source-theme/"
+msgid "Source"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid ""
-"Source is a WordPress theme for coders. <a href=\"https://github.com/kalenjohnson/source"
-"\">Contribute on GitHub</a>"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "https://kalenjohnson.com/"
+msgid "Source is a theme by Kalen Johnson"
 msgstr ""
