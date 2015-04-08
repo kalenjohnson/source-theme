@@ -1,3 +1,9 @@
+pre {
+  background: lighten($base-background-color, 10%);
+  padding: 1em;
+  white-space: pre;
+}
+
 .gist {
   font-size: 1em;
 

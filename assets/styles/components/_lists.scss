@@ -29,3 +29,18 @@ dl {
     margin: 0;
   }
 }
+
+.main {
+  ul {
+    @extend %default-ul;
+    ul {
+      margin-bottom: 0;
+    }
+  }
+  ol {
+    @extend %default-ol;
+    ol {
+      margin-bottom: 0;
+    }
+  }
+}
