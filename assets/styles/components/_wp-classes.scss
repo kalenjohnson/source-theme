@@ -5,13 +5,20 @@
 .wp-caption {
   background: lighten($base-background-color, 10%);
   margin: 0;
-  figcaption {
-    padding: 0 1em 0.5em;
-    font-size: 0.8em;
-  }
 }
 .wp-caption-text {
-
+  padding: 0 1em 0.5em;
+  font-size: 0.8em;
+}
+.sticky {
+  display: block;
+}
+.gallery-caption {
+  font-size: 0.6em;
+  line-height: 1.1em;
+}
+.bypostauthor {
+  display: block;
 }
 
 // Media alignment
