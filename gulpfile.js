@@ -40,16 +40,11 @@ var project = manifest.getProjectGlobs();
 
 // CLI options
 var enabled = {
-  // Enable static asset revisioning when `--production`
-  rev: argv.production,
   // Disable source maps when `--production`
   maps: !argv.production,
   // Fail styles task on error when `--production`
   failStyleTask: argv.production
 };
-
-// Path to the compiled assets manifest in the dist directory
-var revManifest = path.dist + 'assets.json';
 
 // ## Reusable Pipelines
 // See https://github.com/OverZealous/lazypipe
@@ -89,9 +84,6 @@ var cssTasks = function(filename) {
     })
     .pipe($.minifyCss)
     .pipe(function() {
-      return $.if(enabled.rev, $.rev());
-    })
-    .pipe(function() {
       return $.if(enabled.maps, $.sourcemaps.write('.'));
     })();
 };
@@ -111,9 +103,6 @@ var jsTasks = function(filename) {
     .pipe($.concat, filename)
     .pipe($.uglify)
     .pipe(function() {
-      return $.if(enabled.rev, $.rev());
-    })
-    .pipe(function() {
       return $.if(enabled.maps, $.sourcemaps.write('.'));
     })();
 };
@@ -126,10 +115,6 @@ var writeToManifest = function(directory) {
     .pipe(gulp.dest, path.dist + directory)
     .pipe(function() {
       return $.if('**/*.{js,css}', browserSync.reload({stream:true}));
-    })
-    .pipe($.rev.manifest, revManifest, {
-      base: path.dist,
-      merge: true
     })
     .pipe(gulp.dest, path.dist)();
 };
