@@ -18,7 +18,8 @@ If your server is not running at least PHP 5.4, you will not be able to activate
 ## Features
 
 * Clean, dark theme; perfect for coders, developers, or those who love monospace fonts
-* Prism.js for code snippets
+* [Prism.js](http://prismjs.com/) for code snippets
+* [Fontawesome](http://fontawesome.io/) for social media and other icons
 * Automatic social media links (thank you for the great idea [Minnow](https://wordpress.org/themes/minnow/))
 * Built on [Sage](https://github.com/roots/sage)
 
