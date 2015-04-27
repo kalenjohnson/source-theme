@@ -24,11 +24,9 @@ get_template_part('templates/head');
             </main><!-- /.main -->
           </div><!-- /.container -->
         </div><!-- /.content -->
-        <?php
-        get_template_part('templates/footer');
-        wp_footer();
-        ?>
+        <?php get_template_part('templates/footer'); ?>
       </div><!-- /.content-wrap -->
     </div><!-- /.wrap -->
+  <?php wp_footer(); ?>
   </body>
 </html>
