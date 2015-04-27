@@ -12,17 +12,18 @@ Source is a theme for coders to blog about their code
 | Prerequisite    | How to check | How to install
 | --------------- | ------------ | ------------- |
 | PHP >= 5.4.x    | `php -v`     | [php.net](http://php.net/manual/en/install.php) |
-| Node.js 0.12.x  | `node -v`    | [nodejs.org](http://nodejs.org/) |
-| gulp >= 3.8.10  | `gulp -v`    | `npm install -g gulp` |
-| Bower >= 1.3.12 | `bower -v`   | `npm install -g bower` |
 
-For more installation notes, refer to the [Install gulp and Bower](#install-gulp-and-bower) section in this document.
+If your server is not running at least PHP 5.4, you will not be able to activate this theme.
 
 ## Features
 
-* TODO
+* Clean, dark theme; perfect for coders, developers, or those who love monospace fonts
+* [Prism.js](http://prismjs.com/) for code snippets
+* [Fontawesome](http://fontawesome.io/) for social media and other icons
+* Automatic social media links (thank you for the great idea [Minnow](https://wordpress.org/themes/minnow/))
+* Built on [Sage](https://github.com/roots/sage)
 
-Install the [Soil](https://github.com/roots/soil) plugin to enable additional features:
+Includes theme support for the [Soil](https://github.com/roots/soil) plugin to enable additional features:
 
 * Cleaner output of `wp_head` and enqueued assets
 * Root relative URLs
@@ -30,60 +31,26 @@ Install the [Soil](https://github.com/roots/soil) plugin to enable additional fe
 
 ## Installation
 
-* TODO
+### From the WordPress dashboard:
+1. Search `Source` in the theme installer
+2. Click `Install`
+
+### Manually
+1. In your admin panel, go to Appearance -> Themes and click the Add New button.
+2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
+3. Click Activate to use your new theme right away.
 
 ## Configuration
 
-Edit `lib/config.php` to enable or disable theme features
-
-Edit `lib/init.php` to setup navigation menus, post thumbnail sizes, post formats, and sidebars.
+### Adding social media links
+1. Create a new Custom Menu, and assign it to the Social Links menu location.
+2. Add links to each of your social services using the Links panel.
+3. Icons for your social links will appear in the slide-out menu.
 
 ## Theme development
 
-Source uses [gulp](http://gulpjs.com/) as its build system and [Bower](http://bower.io/) to manage front-end packages.
+Source was built using [Sage](https://github.com/roots/sage). Please refer to Sage [documentation](https://roots.io/sage/docs/) on how to use gulp, Bower, etc.
 
-### Install gulp and Bower
+## Changelog
 
-Building the theme requires [node.js](http://nodejs.org/download/). We recommend you update to the latest version of npm: `npm install -g npm@latest`.
-
-From the command line:
-
-1. Install [gulp](http://gulpjs.com) and [Bower](http://bower.io/) globally with `npm install -g gulp bower`
-2. Navigate to the theme directory, then run `npm install`
-3. Run `bower install`
-
-You now have all the necessary dependencies to run the build process.
-
-### Available gulp commands
-
-* `gulp` — Compile and optimize the files in your assets directory
-* `gulp watch` — Compile assets when file changes are made
-
-### Using BrowserSync
-
-To use BrowserSync during `gulp watch` you need to update `devUrl` at the bottom of `assets/manifest.json` to reflect your local development hostname.
-
-For example, if your local development URL is `http://project-name.dev` you would update the file to read:
-```json
-...
-  "config": {
-    "devUrl": "http://project-name.dev"
-  }
-...
-```
-If your local develoment URL looks like `http://localhost:8888/project-name/` you would update the file to read:
-```json
-...
-  "config": {
-    "devUrl": "http://localhost:8888/project-name/"
-  }
-...
-```
-
-## Documentation
-
-* TODO
-
-## Contributing
-
-* TODO
+1.0.0 - April 08, 2015 - Original release, uploaded to WP Theme repo!

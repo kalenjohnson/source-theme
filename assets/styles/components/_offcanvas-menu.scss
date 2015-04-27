@@ -17,8 +17,13 @@
 /* Menu */
 .menu-wrap {
   position: absolute;
+  z-index: -1;
   opacity: 0;
   transition: opacity 0.3s;
+
+  .show-menu & {
+    z-index: auto;
+  }
 }
 
 .menu-top {

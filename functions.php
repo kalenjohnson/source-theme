@@ -2,6 +2,12 @@
 /**
  * Sage includes
  *
+ * We check for minimum PHP first and foremost
+ */
+require_once locate_template('vendor/wpupdatephp/wp-update-php/src/WPUpdatePhp.php');
+require_once locate_template('lib/php-check.php');
+
+/**
  * The $sage_includes array determines the code library included in your theme.
  * Add or remove files to the array as needed. Supports child theme overrides.
  *
@@ -10,10 +16,10 @@
  * @link https://github.com/roots/sage/pull/1042
  */
 $source_includes = [
+  'vendor/autoload.php',           // Composer packages
   'lib/utils.php',                 // Utility functions
   'lib/init.php',                  // Initial theme setup and constants
   'lib/wrapper.php',               // Theme wrapper class
-  'lib/conditional-tag-check.php', // ConditionalTagCheck class
   'lib/config.php',                // Configuration
   'lib/assets.php',                // Scripts and stylesheets
   'lib/titles.php',                // Page titles

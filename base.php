@@ -12,7 +12,10 @@ get_template_part('templates/head');
       </div>
     <![endif]-->
     <div class="wrap" role="document">
-      <?php get_header(); ?>
+      <?php
+      do_action('get_header');
+      get_template_part('templates/header');
+      ?>
       <div class="content-wrap">
         <div class="content">
           <div class="container">
@@ -21,7 +24,10 @@ get_template_part('templates/head');
             </main><!-- /.main -->
           </div><!-- /.container -->
         </div><!-- /.content -->
-        <?php get_footer(); ?>
+        <?php
+        get_template_part('templates/footer');
+        wp_footer();
+        ?>
       </div><!-- /.content-wrap -->
     </div><!-- /.wrap -->
   </body>

@@ -32,3 +32,34 @@ body.blog .hentry:not(:last-of-type) {
 .meta-box h6 {
   margin-bottom: 0;
 }
+
+.hentry header img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: 300px;
+  margin: 0 auto 2em;
+}
+
+@media (min-width: $medium-screen) {
+  .hentry header img {
+    margin-bottom: 0;
+  }
+  .has-post-thumbnail header {
+    @include display(flex);
+    @include align-items(center);
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+    margin-bottom: 2em;
+  }
+
+  .has-post-thumbnail {
+    .featured-image {
+      @include flex(1);
+    }
+    .header-content {
+      @include flex(2);
+      padding-right: 2em;
+    }
+  }
+}

@@ -9,5 +9,7 @@
             "email": "info@kalenjohnson.com"
         }
     ],
-    "require": {}
+    "require": {
+        "wpupdatephp/wp-update-php": "~1.0"
+    }
 }
