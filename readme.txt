@@ -1,21 +1,26 @@
-# [Source Theme](http://kalenjohnson.com)
+== Source Theme ==
 
 Source is a theme for coders to blog about their code
 
-* Source: [https://github.com/kalenjohnson/source-theme](https://github.com/kalenjohnson/source-theme)
-* Homepage: [http://kalenjohnson.com/source-theme/](http://kalenjohnson.com/source-theme/)
-* Documentation: [http://kalenjohnson.com/source-theme/docs/](http://kalenjohnson.com/source-theme/docs/)
-* Twitter: [@kalenjohnson](https://twitter.com/kalenjohnson)
+Contributors: Kalen Johnson
+Tags: blog, dark, minimal, modern, clean, professional, simple, one-column, responsive-layout, sticky-post, translation-ready, threaded-comments
+Tested up to: 4.2
+Stable tag: 4.2
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-## Requirements
+Source is based on Sage https://roots.io/sage/
 
-| Prerequisite    | How to check | How to install
-| --------------- | ------------ | ------------- |
-| PHP >= 5.4.x    | `php -v`     | [php.net](http://php.net/manual/en/install.php) |
+* Source: https://github.com/kalenjohnson/source-theme
+* Homepage: http://kalenjohnson.com/source-theme/
+* Documentation: http://kalenjohnson.com/source-theme/docs/
+* Twitter: https://twitter.com/kalenjohnson
+
+== Requirements ==
 
 If your server is not running at least PHP 5.4, you will not be able to activate this theme.
 
-## Features
+== Features ==
 
 * Clean, dark theme; perfect for coders, developers, or those who love monospace fonts
 * [Prism.js](http://prismjs.com/) for code snippets
@@ -29,28 +34,28 @@ Includes theme support for the [Soil](https://github.com/roots/soil) plugin to e
 * Root relative URLs
 * Nice search (`/search/query/`)
 
-## Installation
+== Installation ==
 
-### From the WordPress dashboard:
+From the WordPress dashboard:
 1. Search `Source` in the theme installer
 2. Click `Install`
 
-### Manually
+Manually
 1. In your admin panel, go to Appearance -> Themes and click the Add New button.
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
-## Configuration
+== Configuration ==
 
-### Adding social media links
+Adding social media links
 1. Create a new Custom Menu, and assign it to the Social Links menu location.
 2. Add links to each of your social services using the Links panel.
 3. Icons for your social links will appear in the slide-out menu.
 
-## Theme Development
+== Theme Development ==
 
 Source was built using [Sage](https://github.com/roots/sage). Please refer to Sage [documentation](https://roots.io/sage/docs/) on how to use gulp, Bower, etc.
 
-## Changelog
+== Changelog ==
 
 0.0.1 - April 08, 2015 - Original release, uploaded to WP Theme repo!
