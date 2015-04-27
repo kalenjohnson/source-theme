@@ -1,5 +1,16 @@
 @import "main";
 
+html,
+body,
+.wrap,
+.content-wrap,
+.menu-wrap,
+.sidebar {
+  overflow: visible;
+  width: auto;
+  height: auto;
+}
+
 body {
   margin: 12px !important;
 }
