@@ -27,6 +27,7 @@ body.blog .hentry:not(:last-of-type) {
 .meta-box time {
   @extend h6;
   font-weight: 600;
+  color: $medium-gray;
 }
 
 .meta-box h6 {
