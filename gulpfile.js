@@ -212,7 +212,8 @@ gulp.task('clean', require('del').bind(null, [path.dist]));
 // build step for that asset and inject the changes into the page.
 // See: http://www.browsersync.io
 gulp.task('watch', function() {
-  browserSync({
+  browserSync.init({
+    files: ['{lib,templates}/**/*.php', '*.php'],
     proxy: config.devUrl,
     snippetOptions: {
       whitelist: ['/wp-admin/admin-ajax.php'],
@@ -224,9 +225,6 @@ gulp.task('watch', function() {
   gulp.watch([path.source + 'fonts/**/*'], ['fonts']);
   gulp.watch([path.source + 'images/**/*'], ['images']);
   gulp.watch(['bower.json', 'assets/manifest.json'], ['build']);
-  gulp.watch('**/*.php', function() {
-    browserSync.reload();
-  });
 });
 
 // ### Build
