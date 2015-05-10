@@ -4,7 +4,7 @@
  *
  * We check for minimum PHP first and foremost
  */
-if ( ! class_exists('WPUpdatePhp')) {
+if (!class_exists('WPUpdatePhp')) {
   require_once locate_template('vendor/wpupdatephp/wp-update-php/src/WPUpdatePhp.php');
 }
 require_once locate_template('lib/php-check.php');

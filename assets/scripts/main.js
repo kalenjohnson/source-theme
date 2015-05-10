@@ -21,15 +21,14 @@
       init: function() {
 
         // https://github.com/codrops/OffCanvasMenuEffects
-        var bodyEl = $('body'),
-          content = $('.content-wrap'),
-          openbtn = $('#open-button');
+        var bodyEl  = $('body');
+        var content = $('.content-wrap');
+        var openbtn = $('#open-button');
 
         function toggleMenu() {
           if (bodyEl.hasClass('show-menu')) {
             bodyEl.removeClass('show-menu');
-          }
-          else {
+          } else {
             bodyEl.addClass('show-menu');
           }
         }
@@ -38,7 +37,7 @@
 
         // close the menu element if the target it´s not the menu element or one of its descendants..
         content.click(function(ev) {
-          if(bodyEl.hasClass('show-menu') && ev.target !== openbtn ) {
+          if (bodyEl.hasClass('show-menu') && ev.target !== openbtn) {
             toggleMenu();
           }
         });

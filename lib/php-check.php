@@ -1,15 +1,15 @@
 <?php
 $updatePhp = new WPUpdatePhp('5.4.0');
 
-if ( ! $updatePhp->does_it_meet_required_php_version(PHP_VERSION)) {
-  $stock_themes = array(
+if (!$updatePhp->does_it_meet_required_php_version(PHP_VERSION)) {
+  $stock_themes = [
     'twentyfifteen',
     'twentyfourteen',
     'twentythirteen',
     'twentytwelve',
     'twentyeleven',
     'twentyten'
-  );
+  ];
   foreach ($stock_themes as $theme) {
     if (file_exists(WP_CONTENT_DIR . '/' . $theme . '/style.css')) {
       switch_theme($theme);

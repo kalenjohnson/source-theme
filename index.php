@@ -12,6 +12,6 @@
 <?php endwhile; ?>
 
 <?php the_posts_navigation([
-  'prev_text' => '<i class="fa fa-fw fa-angle-left"></i> ' . __( 'Older posts', 'source' ),
-  'next_text' => __( 'Newer posts', 'source' ) . ' <i class="fa fa-fw fa-angle-right"></i>',
+  'prev_text' => '<i class="fa fa-fw fa-angle-left"></i> ' . __('Older posts', 'source'),
+  'next_text' => __('Newer posts', 'source') . ' <i class="fa fa-fw fa-angle-right"></i>',
 ]); ?>
