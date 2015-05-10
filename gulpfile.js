@@ -124,11 +124,10 @@ var jsTasks = function(filename) {
 // See https://github.com/sindresorhus/gulp-rev
 var writeToManifest = function(directory) {
   return lazypipe()
-    .pipe(gulp.dest, path.dist + directory)
     .pipe(function() {
       return gulpif('**/*.{js,css}', browserSync.reload({stream:true}));
     })
-    .pipe(gulp.dest, path.dist)();
+    .pipe(gulp.dest, path.dist + directory)();
 };
 
 // ## Gulp tasks
