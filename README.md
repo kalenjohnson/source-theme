@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kalenjohnson/source-theme.svg?branch=master)](https://travis-ci.org/kalenjohnson/source-theme)
+
 # [Source Theme](http://kalenjohnson.com)
 
 Source is a theme for coders to blog about their code
