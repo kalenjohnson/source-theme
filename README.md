@@ -55,4 +55,7 @@ Source was built using [Sage](https://github.com/roots/sage). Please refer to Sa
 
 ## Changelog
 
+Full commit history [here](https://github.com/kalenjohnson/source-theme/commits/master)
+
+0.0.2 - May 10, 2015   - Fixing small issues for theme repo
 0.0.1 - April 08, 2015 - Original release, uploaded to WP Theme repo!
