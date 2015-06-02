@@ -17,7 +17,7 @@ require_once locate_template('lib/php-check.php');
  *
  * @link https://github.com/roots/sage/pull/1042
  */
-$source_includes = [
+$source_includes = array(
   'vendor/autoload.php',           // Composer packages
   'lib/utils.php',                 // Utility functions
   'lib/init.php',                  // Initial theme setup and constants
@@ -26,7 +26,7 @@ $source_includes = [
   'lib/assets.php',                // Scripts and stylesheets
   'lib/titles.php',                // Page titles
   'lib/extras.php',                // Custom functions
-];
+);
 
 foreach ($source_includes as $file) {
   if (!$filepath = locate_template($file)) {
