@@ -1,6 +1,6 @@
 <?php
 /**
- * Sage includes
+ * Source includes
  *
  * We check for minimum PHP first and foremost
  */
@@ -10,7 +10,7 @@ if (!class_exists('WPUpdatePhp')) {
 require_once locate_template('lib/php-check.php');
 
 /**
- * The $sage_includes array determines the code library included in your theme.
+ * The $source_includes array determines the code library included in your theme.
  * Add or remove files to the array as needed. Supports child theme overrides.
  *
  * Please note that missing files will produce a fatal error.
