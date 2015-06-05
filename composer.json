@@ -14,11 +14,11 @@
     },
     "archive": {
         "exclude": [
+            "!/vendor",
             ".*",
             "node_modules",
             "bower_components",
-            "!/dist",
-            "!/vendor"
+            "!/dist"
         ]
     }
 }
