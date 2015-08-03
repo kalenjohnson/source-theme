@@ -60,6 +60,10 @@ Source was built using [Sage](https://github.com/roots/sage). Please refer to Sa
 
 Full commit history here: https://github.com/kalenjohnson/source-theme/commits/master
 
-0.0.3 - May 10, 2015   - Fixing issue with .zip upload
-0.0.2 - May 10, 2015   - Fixing small issues for theme repo
-0.0.1 - April 08, 2015 - Original release, uploaded to WP Theme repo!
+0.0.7 - August 03, 2015  - No dotfiles in composer archive, fix wpupdatephp text, fix theme versions
+0.0.6 - June 04, 2015    - Wrapping all theme functions in PHP check
+0.0.5 - June 02, 2015    - Fixing short array syntax when less than PHP 5.4, added vendor folder to Composer archive command
+0.0.4 - June 02, 2015    - Fixing PHP >5.4 issue, css minification URL issue
+0.0.3 - May 10, 2015     - Fixing issue with .zip upload
+0.0.2 - May 10, 2015     - Fixing small issues for theme repo
+0.0.1 - April 08, 2015   - Original release, uploaded to WP Theme repo!

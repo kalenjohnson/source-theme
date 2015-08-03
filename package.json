@@ -1,8 +1,8 @@
 {
   "name": "source",
-  "version": "0.0.1",
+  "version": "0.0.7",
   "author": "Kalen Johnson <info@kalenjohnson.com>",
-  "homepage": "https://kalenjohnson.com/source-theme/",
+  "homepage": "http://source.kalenjohnson.com/",
   "private": true,
   "repository": {
     "type": "git",
