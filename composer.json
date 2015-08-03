@@ -14,10 +14,11 @@
     },
     "archive": {
         "exclude": [
-            "!/vendor",
             ".*",
+            "ruleset.xml",
             "node_modules",
             "bower_components",
+            "!/vendor",
             "!/dist"
         ]
     }
