@@ -22,7 +22,6 @@ function setup() {
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
-    'primary_navigation' => __('Primary Navigation', 'source'),
     'social_media_links' => __('Social Media Links', 'source'),
   ]);
 
