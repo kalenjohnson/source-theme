@@ -8,7 +8,7 @@ if (!class_exists('WPUpdatePhp')) {
   require_once locate_template('lib/wpupdatephp.php');
 }
 
-$updatePhp = new SourceUpdatePHP('5.7.0');
+$updatePhp = new SourceUpdatePHP('5.4.0');
 
 if (!$updatePhp->does_it_meet_required_php_version(PHP_VERSION)) {
   require_once locate_template('lib/change-theme.php');
