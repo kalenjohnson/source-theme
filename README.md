@@ -57,6 +57,7 @@ Source was built using [Sage](https://github.com/roots/sage). Please refer to Sa
 
 Full commit history [here](https://github.com/kalenjohnson/source-theme/commits/master)
 
+0.0.8 - August 03, 2015  - Building css/js files without sourcemaps
 0.0.7 - August 03, 2015  - No dotfiles in composer archive, fix wpupdatephp text, fix theme versions
 0.0.6 - June 04, 2015    - Wrapping all theme functions in PHP check
 0.0.5 - June 02, 2015    - Fixing short array syntax when less than PHP 5.4, added vendor folder to Composer archive command
