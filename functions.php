@@ -4,7 +4,7 @@
  *
  * We check for minimum PHP first and foremost
  */
-if (!class_exists('WPUpdatePhp')) {
+if (!class_exists('SourceUpdatePHP')) {
   require_once locate_template('lib/wpupdatephp.php');
 }
 
@@ -22,7 +22,6 @@ if (!$updatePhp->does_it_meet_required_php_version(PHP_VERSION)) {
    * @link https://github.com/roots/sage/pull/1042
    */
   $source_includes = array(
-    'vendor/autoload.php',           // Composer packages
     'lib/utils.php',                 // Utility functions
     'lib/init.php',                  // Initial theme setup and constants
     'lib/wrapper.php',               // Theme wrapper class
@@ -31,6 +30,14 @@ if (!$updatePhp->does_it_meet_required_php_version(PHP_VERSION)) {
     'lib/titles.php',                // Page titles
     'lib/extras.php',                // Custom functions
   );
+
+  /**
+   * Include Composer autoload file if it's there
+   * Else, assume it's included with Bedrock
+   */
+  if (locate_template('vendor/autoload.php')) {
+    $source_includes[] = 'vendor/autoload.php';
+  }
 
   foreach ($source_includes as $file) {
     if (!$filepath = locate_template($file)) {
