@@ -2,10 +2,10 @@
 <ruleset name="Roots">
   <description>Roots Coding Standards</description>
 
+  <exclude-pattern>lib/wpupdatephp.php</exclude-pattern>
+
   <!-- Use PSR-2 as a base -->
   <rule ref="PSR2">
-    <exclude-pattern>lib/wpupdatephp.php</exclude-pattern>
-
     <!-- Allow opening and closing braces for functions and classes to be on the same line -->
     <exclude name="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
     <exclude name="PSR2.Classes.ClassDeclaration.OpenBraceNewLine"/>
@@ -25,12 +25,10 @@
   <!-- Don't require a blank line after the last `use` in templates/ directory -->
   <rule ref="PSR2.Namespaces.UseDeclaration.SpaceAfterLastUse">
     <exclude-pattern>templates/*</exclude-pattern>
-    <exclude-pattern>lib/wpupdatephp.php</exclude-pattern>
   </rule>
 
   <!-- Allow PHP closing tags on templates -->
   <rule ref="PSR2.Files.ClosingTag.NotAllowed">
-    <exclude-pattern>lib/wpupdatephp.php</exclude-pattern>
     <exclude-pattern>templates/*</exclude-pattern>
     <exclude-pattern>404.php</exclude-pattern>
     <exclude-pattern>index.php</exclude-pattern>
